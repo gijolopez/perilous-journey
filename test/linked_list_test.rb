@@ -19,7 +19,7 @@ class LinkedListTest < Minitest::Test
   end
 
   def test_if_append_list
-    list = ListList.new
+    list = LinkedList.new
 
     assert_equal "West", list.append("West")
   end
