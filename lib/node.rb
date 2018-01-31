@@ -1,12 +1,14 @@
 class Node
-  attr_reader :surename
-  
+  attr_accessor :surename,
+                :next_node
+
   def initialize(surename)
     @surename = surename
-
+    @next_node = nil
   end
 
-  def next_node
-
-  end
 end
+
+
+ # node = Node.new("Burke")
+ # p node.surename

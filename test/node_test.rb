@@ -17,9 +17,10 @@ class NodeTest < Minitest::Test
     assert_equal "Burke", node.surename
   end
 
-  def test_if_next_node_exist
-    node = Node.new("Burke")""
+  def test_if_next_node_default_nil
+    node = Node.new("Burke")
 
     assert_nil node.next_node
   end
+  
 end
