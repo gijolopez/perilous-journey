@@ -2,35 +2,29 @@ require "./lib/node"
 require 'pry'
 
 class LinkedList
-  attr_reader :head
+  attr_reader :head,
+              :count
 
   def initialize
     @head = nil
+    @count = 0
   end
 
-  def append(data)
-    # current = @head
-    #if head is empty/nil check to next_node
-    @head = Node.new(data)
-
-    # if @head
-    #   @head = new_tail
-    # else
-    #   tail.next_node = new_tail
-    # end
-    # new_tail.data
+  def append(surename)
+    @count += 1
+    @head = Node.new(surename)
   end
 
-  def count
-    if @head == nil
-      return 0
-    else
-      1
-    end
-  end
+  # def count
+  #   if @head == nil
+  #     return 0
+  #   else
+  #     1
+  #   end
+  # end
 
   def to_string
-    "The #{head.surename} family" 
+    "The #{head.surename} family"
   end
 end
 

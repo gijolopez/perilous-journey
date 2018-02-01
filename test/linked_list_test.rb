@@ -48,4 +48,30 @@ class LinkedListTest < Minitest::Test
     assert_equal "The West family", list.to_string
   end
 
+  def test_if_append_list_can_have_different_values
+    list = LinkedList.new
+    node = list.append("Rhodes")
+
+    assert_instance_of Node, node
+    assert_equal "Rhodes", node.surename
+    assert_nil node.next_node
+  end
+
+  def test_if_append_list_can_have_different_values
+    list = LinkedList.new
+    node = list.append("Hardy")
+
+    assert_instance_of Node, node
+    assert_equal "Hardy", node.surename
+    assert_nil node.next_node
+  end
+
+  def test_if_list_can_count
+    list = LinkedList.new
+    # list.append("West")
+    list.append("Rhodes")
+    list.append("Hardy")
+
+    assert_equal 2, list.count
+  end
 end
