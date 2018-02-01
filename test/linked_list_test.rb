@@ -73,5 +73,6 @@ class LinkedListTest < Minitest::Test
     list.append("Hardy")
 
     assert_equal 2, list.count
+    binding.pry
   end
 end

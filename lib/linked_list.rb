@@ -12,7 +12,11 @@ class LinkedList
 
   def append(surename)
     @count += 1
-    @head = Node.new(surename)
+    if @head
+      @head.append(surename)
+    else
+      @head = Node.new(surename)
+    end
   end
 
   # def count
