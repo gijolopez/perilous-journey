@@ -8,7 +8,3 @@ class Node
   end
 
 end
-
-
- # node = Node.new("Burke")
- # p node.surename
